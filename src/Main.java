@@ -331,7 +331,7 @@ public class Main {
         for (int i = 0; i < sentence.length(); i++) {
             if (sentence.toCharArray()[i] == 'a'){
                 numberOfA++;
-            };
+            }
         }
 
         System.out.println("the number of 'a' in the sentence is "+numberOfA);

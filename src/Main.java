@@ -110,10 +110,10 @@ public class Main {
         do {
             System.out.println("enter a number");
             number = input.nextInt();
-            if (number < 0) {
-                System.out.println("the number cant be negative, try again");
+            if (number <= 0) {
+                System.out.println("the number cant be negative or zero, try again");
             }
-        }while (number < 0);
+        }while (number <= 0);
 
         if (number%2 == 0){
             System.out.println(number +" is even");
@@ -161,7 +161,7 @@ public class Main {
         System.out.println("perimeter is = "+perimeter);
 
 //        11. Write a Java program to compare two numbers.
-        System.out.println("compare to numbers helper: ");
+        System.out.println("compare two numbers helper: ");
 
         System.out.println("enter first number:");
         number1 = input.nextInt();
@@ -275,17 +275,28 @@ public class Main {
 //        17 - Write a program to enter the numbers till the user wants and at the end the
 //        program should display the largest and smallest numbers entered.
 
-        int largest = 0, smallest = 0;
+        System.out.println("find largest and smallest numbers");
+        int largest, smallest;
+        boolean firstRun = true;
 
         do {
             System.out.println("enter a number");
             number = input.nextInt();
+
+            if (firstRun){
+                largest = number;
+                smallest = number;
+                firstRun = false;
+            }
+
             if (number > largest){
                 largest = number;
             }
+
             if (number < smallest){
                 smallest = number;
             }
+
             System.out.println("continue? yes/no");
             input.nextLine();
             cont = input.nextLine();

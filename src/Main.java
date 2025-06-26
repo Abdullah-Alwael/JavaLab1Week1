@@ -283,10 +283,7 @@ public class Main {
             numberTemp -=number;
             numberTemp *= 10;
             System.out.print(Math.round(numberTemp));
-            if (number == 0){
-                break;
-            }
-        }while (true);
+        }while (number != 0);
         System.out.println();
 
 //        17 - Write a program to enter the numbers till the user wants and at the end the

@@ -261,7 +261,7 @@ public class Main {
         System.out.println("the number of zeros is "+zeros);
         System.out.println("the number of positives is " +positive);
         System.out.println("the number of negatives is "+negative);
-//TODO can write two solutions
+
 //        16 - Write a program that prompts the user to input an integer and then outputs the
 //        number with the digits reversed.
         System.out.println("reverse number finder:");
@@ -271,6 +271,23 @@ public class Main {
         StringBuilder reverseNumber = new StringBuilder(String.valueOf(number));
 
         System.out.println("The reverse is "+reverseNumber.reverse());
+
+        // second solution to Q16:
+
+        System.out.println("------Using second solution:");
+        double numberTemp;
+
+        do {
+            numberTemp = (double) number /10;
+            number /=10;
+            numberTemp -=number;
+            numberTemp *= 10;
+            System.out.print(Math.round(numberTemp));
+            if (number == 0){
+                break;
+            }
+        }while (true);
+        System.out.println();
 
 //        17 - Write a program to enter the numbers till the user wants and at the end the
 //        program should display the largest and smallest numbers entered.

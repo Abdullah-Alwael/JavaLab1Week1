@@ -276,7 +276,7 @@ public class Main {
 //        program should display the largest and smallest numbers entered.
 
         System.out.println("find largest and smallest numbers");
-        int largest, smallest;
+        int largest = 0, smallest = 0;
         boolean firstRun = true;
 
         do {
